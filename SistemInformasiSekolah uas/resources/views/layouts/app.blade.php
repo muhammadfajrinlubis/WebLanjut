@@ -2,21 +2,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <title>Sistem Informasi Akademik Sekolah</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {{-- <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css') }}"> --}}
+  <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css') }}">
   <link rel="stylesheet" href="{{ asset('plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
   <link rel="stylesheet" href="{{ asset('plugins/toastr/toastr.min.css') }}">
   <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
+  
 </head>
-<body class="hold-transition login-page" >
+<body class="hold-transition login-page">
   <div class="login-box">
     <div class="login-logo">
      
     </div>
 
-    <div class="login-logo" style="color: white;">
+    <div class="login-logo" style="color: rgb(14, 2, 2);">
       @yield('page')
     </div>
 
@@ -24,7 +26,7 @@
       @yield('content')
     </div>
 
-    <footer style="color: white;">
+    <footer style="color: rgb(70, 181, 27);">
      
     </footer>
   </div>

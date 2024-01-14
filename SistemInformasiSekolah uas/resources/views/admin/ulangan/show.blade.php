@@ -87,11 +87,36 @@
                                         $array = array('mapel' => $val, 'siswa' => $siswa->id);
                                         $jsonData = json_encode($array);
                                     @endphp
-                                    <td class="ctr">{{ $data->cekUlangan($jsonData)['ulha_1'] }}</td>
-                                    <td class="ctr">{{ $data->cekUlangan($jsonData)['ulha_2'] }}</td>
-                                    <td class="ctr">{{ $data->cekUlangan($jsonData)['uts'] }}</td>
-                                    <td class="ctr">{{ $data->cekUlangan($jsonData)['ulha_3'] }}</td>
-                                    <td class="ctr">{{ $data->cekUlangan($jsonData)['uas'] }}</td>
+                                   @if(isset($data->cekUlangan($jsonData)['ulha_1']))
+                                   <td class="ctr">{{ $data->cekUlangan($jsonData)['ulha_1'] }}</td>
+                               @else
+                                   <td class="ctr">Value not available</td>
+                               @endif
+                               
+                               @if(isset($data->cekUlangan($jsonData)['ulha_2']))
+                                   <td class="ctr">{{ $data->cekUlangan($jsonData)['ulha_2'] }}</td>
+                               @else
+                                   <td class="ctr">Value not available</td>
+                               @endif
+                               
+                               @if(isset($data->cekUlangan($jsonData)['uts']))
+                                   <td class="ctr">{{ $data->cekUlangan($jsonData)['uts'] }}</td>
+                               @else
+                                   <td class="ctr">Value not available</td>
+                               @endif
+                               
+                               @if(isset($data->cekUlangan($jsonData)['ulha_3']))
+                                   <td class="ctr">{{ $data->cekUlangan($jsonData)['ulha_3'] }}</td>
+                               @else
+                                   <td class="ctr">Value not available</td>
+                               @endif
+                               
+                               @if(isset($data->cekUlangan($jsonData)['uas']))
+                                   <td class="ctr">{{ $data->cekUlangan($jsonData)['uas'] }}</td>
+                               @else
+                                   <td class="ctr">Value not available</td>
+                               @endif
+                               
                                 </tr>
                             @endforeach
                     </tbody>

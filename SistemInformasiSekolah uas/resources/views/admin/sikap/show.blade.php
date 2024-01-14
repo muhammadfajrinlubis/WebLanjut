@@ -87,9 +87,24 @@
                                         $array = array('mapel' => $data->id, 'siswa' => $siswa->id);
                                         $jsonData = json_encode($array);
                                     @endphp
-                                    <td class="ctr">{{ $data->cekSikap($jsonData)['sikap_1'] }}</td>
-                                    <td class="ctr">{{ $data->cekSikap($jsonData)['sikap_2'] }}</td>
-                                    <td class="ctr">{{ $data->cekSikap($jsonData)['sikap_3'] }}</td>
+                                   @if(isset($data->cekSikap($jsonData)['sikap_1']))
+                                   <td class="ctr">{{ $data->cekSikap($jsonData)['sikap_1'] }}</td>
+                               @else
+                                   <td class="ctr">Value not available</td>
+                               @endif
+                               
+                               @if(isset($data->cekSikap($jsonData)['sikap_2']))
+                                   <td class="ctr">{{ $data->cekSikap($jsonData)['sikap_2'] }}</td>
+                               @else
+                                   <td class="ctr">Value not available</td>
+                               @endif
+                               
+                               @if(isset($data->cekSikap($jsonData)['sikap_3']))
+                                   <td class="ctr">{{ $data->cekSikap($jsonData)['sikap_3'] }}</td>
+                               @else
+                                   <td class="ctr">Value not available</td>
+                               @endif
+                               
                                 </tr>
                             @endforeach
                     </tbody>

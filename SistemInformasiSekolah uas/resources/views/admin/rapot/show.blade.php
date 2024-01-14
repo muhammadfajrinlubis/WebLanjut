@@ -92,12 +92,13 @@
                                         $array = array('mapel' => $val, 'siswa' => $siswa->id);
                                         $jsonData = json_encode($array);
                                     @endphp
-                                    <td class="ctr">{{ $data->cekRapot($jsonData)['p_nilai'] }}</td>
-                                    <td class="ctr">{{ $data->cekRapot($jsonData)['p_predikat'] }}</td>
-                                    <td class="ctr">{{ $data->cekRapot($jsonData)['p_deskripsi'] }}</td>
-                                    <td class="ctr">{{ $data->cekRapot($jsonData)['k_nilai'] }}</td>
-                                    <td class="ctr">{{ $data->cekRapot($jsonData)['k_predikat'] }}</td>
-                                    <td class="ctr">{{ $data->cekRapot($jsonData)['k_deskripsi'] }}</td>
+                                   <td class="ctr">{{ $data->cekRapot($jsonData)['p_nilai'] ?? 'Value not available' }}</td>
+                                   <td class="ctr">{{ $data->cekRapot($jsonData)['p_predikat'] ?? 'Value not available' }}</td>
+                                   <td class="ctr">{{ $data->cekRapot($jsonData)['p_deskripsi'] ?? 'Value not available' }}</td>
+                                   <td class="ctr">{{ $data->cekRapot($jsonData)['k_nilai'] ?? 'Value not available' }}</td>
+                                   <td class="ctr">{{ $data->cekRapot($jsonData)['k_predikat'] ?? 'Value not available' }}</td>
+                                   <td class="ctr">{{ $data->cekRapot($jsonData)['k_deskripsi'] ?? 'Value not available' }}</td>
+                                   
                                 </tr>
                             @endforeach
                     </tbody>
